@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FAF6EE;
+    color: #4A3E3D;
+    font-family: 'Quicksand', 'Nunito', sans-serif;
+  }
+
+  h1, h2, h3, .font-hand {
+    font-family: 'Patrick Hand', 'Caveat', cursive;
+  }
+
+  .font-display {
+    font-family: 'Itim', 'Patrick Hand', cursive;
+  }
+}
+
+/* Custom Paper & Scrapbook Styles */
+.bg-grid-paper {
+  background-color: #FFFEFA;
+  background-image: 
+    linear-gradient(to right, rgba(217, 203, 178, 0.22) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(217, 203, 178, 0.22) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.bg-lined-paper {
+  background-color: #FFFEFA;
+  background-image: linear-gradient(to bottom, transparent 94%, rgba(217, 203, 178, 0.35) 95%);
+  background-size: 100% 28px;
+}
+
+.bg-dots-paper {
+  background-color: #FFFEFA;
+  background-image: radial-gradient(rgba(217, 203, 178, 0.35) 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
+}
+
+/* Notebook Perforated Strip (from Reference 1 Reminder Card) */
+.perforated-top {
+  position: relative;
+}
+.perforated-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: radial-gradient(circle at 10px 0, #FAF6EE 6px, transparent 7px);
+  background-size: 20px 10px;
+}
+
+/* Washi Tape styling (from Reference 3) */
+.washi-tape-top {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1deg);
+  width: 90px;
+  height: 22px;
+  background: rgba(246, 219, 155, 0.75);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  border-left: 3px dashed rgba(200, 160, 90, 0.4);
+  border-right: 3px dashed rgba(200, 160, 90, 0.4);
+  z-index: 10;
+}
+
+.washi-tape-corner {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 70px;
+  height: 20px;
+  background: rgba(248, 180, 180, 0.65);
+  transform: rotate(35deg);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  z-index: 10;
+}
+
+/* Stitched Dashed Outline (from Reference 3) */
+.stitched-border {
+  border: 2px dashed #E2CE98;
+  border-radius: 1.75rem;
+}
+
+/* Custom Cozy Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF6EE;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E0D3C1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #CDBBA4;
+}
